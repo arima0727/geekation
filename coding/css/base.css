@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 上の部分は気にせずここから書く */
+
+/* 共通部分 */
+.pt-10 {padding-top:10px;}
+.mt-10 {margin-top:10px;}
+.mt-15 {margin-top:15px;}
+.mt-20 {margin-top:20px;}
+.bold {font-weight:bold;}
+
+body {
+  background-color: #FFEFD5;
+  color: #333;
+  text-align: justify;
+}
+
+.center {
+  margin:0 auto;
+}
+
+ul,li{
+  font-size:14px;
+  line-height:28px;
+  margin-bottom:15px;
+}
+
+img{
+  width: 100%;
+}
+
+h2 {
+  font-size: 21px;
+  padding-left: 15px;
+}
+
+/* メニュー部分 */
+.bg-darkgray {
+  background-color: lightgray;
+}
+
+.brand-name {
+  font-size:36px;
+  color: #333;
+}
+
+.menu {
+  font-size:16px;
+  color: #999;
+}
+
+.menu ul,li{
+  margin: 0 15px 0 0 !important;
+}
+
+.search_button{
+  border: solid 1px lightgray;
+  background-color: white;
+  color: #333;
+}
+
+.navbar-toggler:focus{
+  border: solid 2px orange !important;
+  outline: solid 2px white !important;
+  box-shadow: none !important;
+}
+
+/* スライダー部分　*/
+.swiper-slide {
+  height: 70vh;
+}
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 新型コロナウイルスに対する取り組みの最新情報をご案内 */
+.guide{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* アコーディオンメニュー */
+.accordion {
+  margin: 3em auto;
+  }
+  .toggle {
+  display: none;
+  }
+  .option {
+  position: relative;
+  }
+  .title,
+  .content {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 1.0s;
+  }
+  .title {
+  border: solid 1px #FFEFD5;
+  padding: 5px;
+  display: block;
+  color: #333;
+  background-color:#FFc7AF;
+  }
+
+  .content {
+  max-height: 0;
+  overflow: hidden;
+  }
+  .content p {
+  margin: 0;
+  padding: 0.5em 1em 1em;
+  font-size: 0.9em;
+  line-height: 1.5;
+  }
+  .toggle:checked + .title + .content {
+  max-height: 500px;
+  transition: all 1.5s;
+  }
+  .toggle:checked + .title::before {
+  transform: rotate(90deg) !important;
+  }
+
+.caution {
+  font-size: 24px;
+}
+
+/* 商品紹介 */
+.container {
+  padding:15px;
+}
+
+.container img {
+  padding-right: 15px;
+}
+
+.intro {
+  margin: 50px 0 15px 0;
+  font-size: 21px;
+  font-weight:bold;
+}
+
+.explain {
+  padding: 15px 15px 0px 30px;
+}
+
+/* 住所 */
+.address {
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+.address h2 {
+  padding-left:10px;
+}
+
+.address p {
+  font-size:13px;
+  line-height: 2rem;
+}
+
+.address img {
+  padding: 0 0 0 15px;
+}
+
+/* 店舗一覧 */
+.shop-list {
+  font-size:12px;
+  padding:15px;
+  text-align:center;
+}
+
+.shop-list h2{
+  text-align:center;
+}
+
+.shop-list img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position:50% 50%;
+  margin:0 auto 10px auto;
+}
+
+/* フッター */
+.footer{
+  width: 100%;
+  margin-top: 20px;
+  padding: 30px 0;
+  background-color: darkgray;
+  font-size: 14px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    height: 50vh;
+  }
+  .container-fluid,.food {
+    padding:0;
+  }
+  .explain,.container{
+    padding: 0;
+    margin-bottom:15px;
+  }
+  .address {
+    padding: 15px 0 0 0;
+  }
+  .shop-list {
+		display: none;
+	}
+  img{
+		padding: 0 !important;
+	}
+}
+
+/* fadeUp */
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+  .fadeUpTrigger{
+      opacity: 0;
+  }
