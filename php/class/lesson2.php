@@ -12,6 +12,8 @@ class Patient extends Person{
 
 // height: float 身長（ｍ）private
 // weight: float 体重 (kg) private
+    private float $height;
+    private float $weight;
 
 // __construct(name: string, age:int, gender: string, height: float, weight: float)
 // 名前、年齢、性別、身長、体重を受け取り初期化する。
@@ -47,7 +49,7 @@ public function getWeight(){
 echo '<br><br>';
 $yamada = new Patient('山田太郎', 30, '男', 1.70, 65.0);
 echo ( $yamada -> name.'さんの身長は');
-echo ( $yamada -> height.'mなので平均体重は');
+echo ( $yamada -> getHeight() .'mなので平均体重は');
 echo ( $yamada -> calculateStandardWeight() . 'kgです。現在の体重は');
-echo ( $yamada -> weight.'kgです。');
+echo ( $yamada -> getWeight() .'kgです。');
 ?>
