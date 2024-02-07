@@ -42,7 +42,6 @@ window.onload = function(){
             alert(message);
 			return;
         }else{
-            alert('入力チェックOK');
             form.submit();
         }
     });

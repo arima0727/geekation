@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-01-30 01:45:02
+/* Smarty version 4.3.2, created on 2024-02-03 22:54:49
   from 'C:\xampp\htdocs\mvc_app\Views\contacts\contact-confirmation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_65b7d60ec08a68_07988939',
+  'unifunc' => 'content_65be45a9417744_31805026',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '383710efb5439d37d93a66faf419262f61e706dc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mvc_app\\Views\\contacts\\contact-confirmation.tpl',
-      1 => 1706546670,
+      1 => 1706630099,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65b7d60ec08a68_07988939 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65be45a9417744_31805026 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="ja">
 <head>
@@ -40,7 +40,7 @@ function content_65b7d60ec08a68_07988939 (Smarty_Internal_Template $_smarty_tpl)
     <div class="row justify-content-center">
         <div class="col-lg-6 mx-auto col-md-8">
             <h2 class="mb-4">お問い合わせ</h2>
-            <form action="/contacts/contact-complete"method='POST' >
+            <form action="/contacts/contact-complete"method='POST'>
                 <div class="form-group">
                     <label>氏名</label>
                     <input type="text" class="form-control" name="name" value="<?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['name'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>

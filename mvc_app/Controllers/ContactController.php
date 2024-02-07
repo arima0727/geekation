@@ -14,6 +14,7 @@ class ContactController extends Controller
         $_SESSION = $_POST;
         
         $errors = array();
+        
         // 氏名のバリデーション
         if (empty($name)) {
             $errors['name'] = '氏名を入力してください。';
@@ -56,7 +57,7 @@ class ContactController extends Controller
             $record = $this->escapeFormData($record);
             $this->view('contacts/contactform',['post' => $_POST, 'posts' => $record, 'errors' => $errors]);
 
-        } else {           
+        } else {       
             $this->view('contacts/contact-confirmation',['post' => $_POST]);
         }   
     }
@@ -108,6 +109,11 @@ class ContactController extends Controller
     }
 
     public function update(){
+        $referer = @$_SERVER['HTTP_REFERER'];
+        if (empty($referer)) {
+            die('このページへの直接アクセスは禁止されています。');
+            header('Location: /contacts/');
+        }
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $url = $_SERVER['REQUEST_URI'];
             $params = explode('/', $url);
@@ -119,12 +125,12 @@ class ContactController extends Controller
         }
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $contactId = $_POST['id'];
-                $name = $_POST['name'];
-                $kana = $_POST['kana'];
-                $email = $_POST['email'];
-                $tel = $_POST['tel'];
-                $body = $_POST['body'];
+                $contactId = htmlspecialchars($_POST['id'], ENT_QUOTES,'UTF-8');
+                $name = htmlspecialchars($_POST['name'], ENT_QUOTES,'UTF-8');
+                $kana = htmlspecialchars($_POST['kana'], ENT_QUOTES,'UTF-8');
+                $email = htmlspecialchars($_POST['email'], ENT_QUOTES,'UTF-8');
+                $tel = htmlspecialchars($_POST['tel'], ENT_QUOTES,'UTF-8');
+                $body = htmlspecialchars($_POST['body'], ENT_QUOTES,'UTF-8');
                 $errors = array();
     
                 // 氏名のバリデーション

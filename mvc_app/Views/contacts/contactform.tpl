@@ -18,27 +18,27 @@
             <form action="/contacts/contactform" id='my-action' method="post" class="bg-white p-3 rounded mb-5">
                 <div class="form-group">
                     <label form="name">名前</label><span>必須</span>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="テスト太郎" value="{$_SESSION['name']|default:''}">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="テスト太郎" value="{$post['name']|default:''}">
                     <p class="error-text">{$errors['name']|default:''}</p>
                 </div>
                 <div class="form-group">
-                    <label form="name">フリガナ</label><span>必須</span>
-                    <input type="text" class="form-control" name="kana" id="kana" placeholder="テストタロウ" value="{$_SESSION['kana']|default:''}">
+                    <label form="kana">フリガナ</label><span>必須</span>
+                    <input type="text" class="form-control" name="kana" id="kana" placeholder="テストタロウ" value="{$post['kana']|default:''}">
                     <p class="error-text">{$errors['kana']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="email">メールアドレス</label><span>必須</span>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="example@cin-group.co.jp" value="{$_SESSION['email']|default:''}">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="example@cin-group.co.jp" value="{$post['email']|default:''}">
                     <p class="error-text">{$errors['email']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="tel">電話番号</label>
-                    <input type="tel" class="form-control" name="tel" id="tel" placeholder="0000000000" value="{$_SESSION['tel']|default:''}">
+                    <input type="tel" class="form-control" name="tel" id="tel" placeholder="0000000000" value="{$post['tel']|default:''}">
                     <p class="error-text">{$errors['tel']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="contact">お問い合わせ内容</label><span>必須</span>
-                    <textarea rows='4' type="text" class="form-control" name="body" id="body" placeholder="お問い合わせ内容"></textarea>
+                    <textarea rows='4' type="text" class="form-control" name="body" id="body" placeholder="お問い合わせ内容">{$post['body']|default:''}</textarea>
                     <p class="error-text">{$errors['body']|default:''}</p>
                 </div>
 
