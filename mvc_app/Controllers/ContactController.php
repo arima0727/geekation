@@ -91,9 +91,8 @@ class ContactController extends Controller
     public function complete(){
         $referer = @$_SERVER['HTTP_REFERER'];
         if (empty($referer)) {
-            die('このページへの直接アクセスは禁止されています。');
             header('Location: /contacts/contactform');
-
+            exit;
         }else{
             $Data = $_SESSION;
                     $Contact = new Contact;
@@ -111,8 +110,8 @@ class ContactController extends Controller
     public function update(){
         $referer = @$_SERVER['HTTP_REFERER'];
         if (empty($referer)) {
-            die('このページへの直接アクセスは禁止されています。');
-            header('Location: /contacts/');
+            header('Location: /contacts/contactform');
+            exit;
         }
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $url = $_SERVER['REQUEST_URI'];

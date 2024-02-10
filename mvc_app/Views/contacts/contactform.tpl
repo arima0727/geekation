@@ -19,31 +19,31 @@
                 <div class="form-group">
                     <label form="name">名前</label><span>必須</span>
                     <input type="text" class="form-control" name="name" id="name" placeholder="テスト太郎" value="{$post['name']|default:''}">
-                    <p class="error-text">{$errors['name']|default:''}</p>
+                    <p id="nameMessage" class="error-text">{$errors['name']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="kana">フリガナ</label><span>必須</span>
                     <input type="text" class="form-control" name="kana" id="kana" placeholder="テストタロウ" value="{$post['kana']|default:''}">
-                    <p class="error-text">{$errors['kana']|default:''}</p>
+                    <p id="kanaMessage" class="error-text">{$errors['kana']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="email">メールアドレス</label><span>必須</span>
                     <input type="email" class="form-control" name="email" id="email" placeholder="example@cin-group.co.jp" value="{$post['email']|default:''}">
-                    <p class="error-text">{$errors['email']|default:''}</p>
+                    <p id="emailMessage" class="error-text">{$errors['email']|default:''}</p>
                 </div>
                 <div class="form-group">
                     <label form="tel">電話番号</label>
                     <input type="tel" class="form-control" name="tel" id="tel" placeholder="0000000000" value="{$post['tel']|default:''}">
-                    <p class="error-text">{$errors['tel']|default:''}</p>
-                </div>
+                    <p id="telMessage" class="error-text">{$errors['tel']|default:''}</p>
+               </div>
                 <div class="form-group">
                     <label form="contact">お問い合わせ内容</label><span>必須</span>
                     <textarea rows='4' type="text" class="form-control" name="body" id="body" placeholder="お問い合わせ内容">{$post['body']|default:''}</textarea>
-                    <p class="error-text">{$errors['body']|default:''}</p>
+                    <p id="bodyMessage" class="error-text">{$errors['body']|default:''}</p>
                 </div>
 
                 <div action='UserController.php' method="post">
-                    <button type='submit' class='btn bg-warning my-1' id="btnSubmit">内容確認</button>
+                    <button type='submit' class='submit btn bg-warning my-1' id="btnSubmit">内容確認</button>
                 </div>
             </form>
         </div>

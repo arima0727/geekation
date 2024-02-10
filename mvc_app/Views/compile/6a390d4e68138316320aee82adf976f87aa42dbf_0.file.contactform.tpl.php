@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-02-07 20:40:28
+/* Smarty version 4.3.2, created on 2024-02-10 16:21:52
   from 'C:\xampp\htdocs\mvc_app\Views\contacts\contactform.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_65c36c2caab711_35396105',
+  'unifunc' => 'content_65c72410cab4b8_66342195',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a390d4e68138316320aee82adf976f87aa42dbf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mvc_app\\Views\\contacts\\contactform.tpl',
-      1 => 1707306027,
+      1 => 1707549710,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65c36c2caab711_35396105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65c72410cab4b8_66342195 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="ja">
 <head>
@@ -45,40 +45,40 @@ function content_65c36c2caab711_35396105 (Smarty_Internal_Template $_smarty_tpl)
                     <label form="name">名前</label><span>必須</span>
                     <input type="text" class="form-control" name="name" id="name" placeholder="テスト太郎" value="<?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['name'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 ">
-                    <p class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['name'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
+                    <p id="nameMessage" class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['name'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </p>
                 </div>
                 <div class="form-group">
                     <label form="kana">フリガナ</label><span>必須</span>
                     <input type="text" class="form-control" name="kana" id="kana" placeholder="テストタロウ" value="<?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['kana'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 ">
-                    <p class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['kana'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
+                    <p id="kanaMessage" class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['kana'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </p>
                 </div>
                 <div class="form-group">
                     <label form="email">メールアドレス</label><span>必須</span>
                     <input type="email" class="form-control" name="email" id="email" placeholder="example@cin-group.co.jp" value="<?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['email'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 ">
-                    <p class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['email'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
+                    <p id="emailMessage" class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['email'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </p>
                 </div>
                 <div class="form-group">
                     <label form="tel">電話番号</label>
                     <input type="tel" class="form-control" name="tel" id="tel" placeholder="0000000000" value="<?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['tel'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 ">
-                    <p class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['tel'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
+                    <p id="telMessage" class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['tel'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </p>
-                </div>
+               </div>
                 <div class="form-group">
                     <label form="contact">お問い合わせ内容</label><span>必須</span>
                     <textarea rows='4' type="text" class="form-control" name="body" id="body" placeholder="お問い合わせ内容"><?php echo (($tmp = $_smarty_tpl->tpl_vars['post']->value['body'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </textarea>
-                    <p class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['body'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
+                    <p id="bodyMessage" class="error-text"><?php echo (($tmp = $_smarty_tpl->tpl_vars['errors']->value['body'] ?? null)===null||$tmp==='' ? '' ?? null : $tmp);?>
 </p>
                 </div>
 
                 <div action='UserController.php' method="post">
-                    <button type='submit' class='btn bg-warning my-1' id="btnSubmit">内容確認</button>
+                    <button type='submit' class='submit btn bg-warning my-1' id="btnSubmit">内容確認</button>
                 </div>
             </form>
         </div>
